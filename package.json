@@ -1,0 +1,23 @@
+{
+  "name": "wtimer",
+  "version": "1.0.0",
+  "description": "very light and fast setInterval implementation with using Web-Workers to keep up and running on inactive tabs for Browsers",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/langhuihui/timer.git"
+  },
+  "keywords": [
+    "timer",
+    "webworker"
+  ],
+  "author": "dexter",
+  "license": "SEE LICENSE IN LISCENSE",
+  "bugs": {
+    "url": "https://github.com/langhuihui/timer/issues"
+  },
+  "homepage": "https://github.com/langhuihui/timer#readme"
+}
