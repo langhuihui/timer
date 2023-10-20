@@ -1,10 +1,12 @@
 {
   "name": "wtimer",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "very light and fast setInterval implementation with using Web-Workers to keep up and running on inactive tabs for Browsers",
   "main": "dist/index.js",
+  "type": "module",
+  "types": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

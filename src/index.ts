@@ -30,10 +30,11 @@ export default function createWorkerInterval(interval: number = 10) {
       worker.terminate();
       URL.revokeObjectURL(url);
     },
-    setInterval: (interval: number) => {
-      const port = new MessageChannel().port1;
-      worker.postMessage(interval, [port]);
-      return port;
+    setInterval: (callback: (...args: any[]) => void, interval: number, ...args: any[]) => {
+      const { port1, port2 } = new MessageChannel();
+      worker.postMessage(interval, [port1]);
+      port2.onmessage = () => callback(...args);
+      return port2;
     },
     clearInterval: (port: MessagePort) => {
       port.postMessage(null);
